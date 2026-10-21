@@ -14,20 +14,23 @@ public class Calculadora {
 
     /** @return la suma de a y b */
     public int sumar(int a, int b) {
+        return a+b;
         // TODO: escriba su código aquí
-        throw new UnsupportedOperationException("TODO: sumar");
+        
     }
 
     /** @return a menos b */
     public int restar(int a, int b) {
         // TODO: escriba su código aquí
-        throw new UnsupportedOperationException("TODO: restar");
+        return a-b;
+        
     }
 
     /** @return el producto de a y b */
     public int multiplicar(int a, int b) {
         // TODO: escriba su código aquí
-        throw new UnsupportedOperationException("TODO: multiplicar");
+        return a*b;
+        
     }
 
     /**
@@ -36,13 +39,19 @@ public class Calculadora {
      */
     public double dividir(int a, int b) {
         // TODO: escriba su código aquí.
-        // Pista: si divide dos int, Java descarta los decimales. Convierta uno a double.
-        throw new UnsupportedOperationException("TODO: dividir");
+                // Si b es 0, lanzamos la excepción manualmente
+        if (b == 0) {
+            throw new ArithmeticException("No se puede dividir entre cero");
+        }
+        // Si no es cero, hacemos la división con decimales
+        
+            return (double) a/b;   
     }
 
     /** @return true si el número es par (el 0 es par; los negativos también pueden serlo) */
     public boolean esPar(int numero) {
         // TODO: escriba su código aquí
-        throw new UnsupportedOperationException("TODO: esPar");
+        return numero%2==0;
+
     }
 }
